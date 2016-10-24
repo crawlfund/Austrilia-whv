@@ -1,1 +1,1 @@
-chrome.exe --allow-running-insecure-content
+C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe --allow-running-insecure-content

@@ -1,11 +1,11 @@
-var passportNumber = 'E9090980'; //passport number
+var passportNumber = 'E09669419'; //passport number
 var cboTitle = 3; //MR = 1 MRS = 2 MS =3
-var FName = 'Jinun';
-var LName = 'Kim';
-var mobileNumber = '1899090980';
-var email = 'wrgupb89307@chacuo.net';
-var city = 2; //2 = shanghai , 1 = beijeng ,3 = guangzhou , 4 = chengdu
-var password = 'fdsfads324789470fas6';
+var FName = 'ZHENG';
+var LName = 'MENGZHU';
+var mobileNumber = '18683086960';
+var email = '95558379@qq.com';
+var city = 4; //2 = shanghai , 1 = beijeng ,3 = guangzhou , 4 = chengdu
+var password = 'zmzy2696114';
 
 
 
@@ -34,7 +34,7 @@ var killCaptcha = function(callback) {
   if (imageName == undefined) {
     callback();
   }
-  imageUrl = "https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/" + imageName;
+  imageUrl = "https://www.visaservices.in/DIAC-China-Appointment_new/AppScheduling/"+ imageName;
   var enterCaptcha = function(result) {
     c.children(1).children(1).children(0).children(3).children(0).val(result);
     callback();
@@ -47,7 +47,7 @@ var killCaptcha = function(callback) {
 var whv_get = function() {
   //who am i
   //im a deamo
-  if (window.location.href == 'https://www.visaservices.org.in/') {
+  if (window.location.href == 'https://www.visaservices.in/') {
     //insert email box
     $("body").append("这里输入你邮件里收到的连接：<input id='vaddress'></input>");
       //initial
@@ -59,7 +59,7 @@ var whv_get = function() {
     }
     else {
         for (i = 0; i < windowNum; i++) {
-            w[i] = window.open('https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d');
+            w[i] = window.open('https://www.visaservices.in/DIAC-China-Appointment_new/AppScheduling/AppWelcome.aspx');
         }
     }
     //run deamo function in interval time
@@ -84,7 +84,7 @@ function deamo() {
               w[i] = window.open($("#vaddress").val());
           }
           else {
-              w[i] = window.open('https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d');
+              w[i] = window.open('https://www.visaservices.in/DIAC-China-Appointment_new/AppScheduling/');
           }
       }
       //is connection failed?
@@ -99,7 +99,7 @@ function deamo() {
           w[i] = window.open($("#vaddress").val());
       }
       else {
-          w[i] = window.open('https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d');
+          w[i] = window.open('https://www.visaservices.in/DIAC-China-Appointment_new/AppScheduling/');
       }
     }
   }
@@ -142,10 +142,14 @@ function monitor() {
       // //find whv
       if (catagory.options.length > 0) {
           for (i = 1; i < catagory.options.length; i++) {
-              if (catagory.options[i].text.indexOf('work') > -1 || catagory.options[i].text.indexOf('whv') > -1 || catagory.options[i].text.indexOf('WHV') > -1 || catagory.options[i].text.indexOf('Work') > -1) {
+	          
+              if(catagory.options[i].text.indexOf('work') > -1 || catagory.options[i].text.indexOf('whv') > -1 || catagory.options[i].text.indexOf('WHV') > -1 || catagory.options[i].text.indexOf('Work') > -1) {
+	              
+	      
                   catagory.selectedIndex = i;
+
                   whv = 1;
-                  //window.open('http://blog.ilc.edu.tw/blog/gallery/6557/6557-1013015.mp3');
+                  window.open('http://blog.ilc.edu.tw/blog/gallery/6557/6557-1013015.mp3');
                   setInterval(function () {
                       killCaptcha(function () {
                           document.getElementById('ctl00_plhMain_btnSubmit').click()
@@ -167,8 +171,8 @@ function monitor() {
           //alert('no whv');
        window.close();
        //no whv , refresh
-       //window.location.href = 'https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d';
-       //redirectToPage(“https://www.visaservices.org.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d”);
+       //window.location.href = 'https://www.visaservices.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d';
+       //redirectToPage(“https://www.visaservices.in/DIAC-China-Appointment/AppScheduling/AppWelcome.aspx?p=Gta39GFZnstZVCxNVy83zTlkvzrXE95fkjmft28XjNg%3d”);
      }
   }
 
@@ -183,11 +187,10 @@ function monitor() {
   }
 
 
-
   //page four , input profile
   var passportNo = document.getElementById('ctl00_plhMain_repAppVisaDetails_ctl01_tbxPassportNo');
   if (passportNo != null) {
-    //window.open('http://blog.ilc.edu.tw/blog/gallery/6557/6557-1013015.mp3');
+    window.open('http://blog.ilc.edu.tw/blog/gallery/6557/6557-1013015.mp3');
     passportNo.value = passportNumber;
     document.getElementById('ctl00_plhMain_repAppVisaDetails_ctl01_cboTitle').selectedIndex = cboTitle;
     document.getElementById('ctl00_plhMain_repAppVisaDetails_ctl01_tbxFName').value = FName;
